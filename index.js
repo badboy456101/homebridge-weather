@@ -27,7 +27,6 @@ function WeatherAccessory(log, config) {
     this.locationById = config["locationById"];
     this.locationByCoordinates = config["locationByCoordinates"];
     this.locationByZip = config["locationByZip"];
-    this.units = config["units"];
     if (config["showHumidity"] != null) {
         this.showHumidity = config["showHumidity"];
     } else {
@@ -338,7 +337,7 @@ WeatherAccessory.prototype =
                 url += "forecast";
             }
 
-            url += "?APPID=" + this.apikey + "&units=" + this.units + "&";
+            url += "?APPID=" + this.apikey + "&units=imperial&";
             if (this.locationByCity) {
                 url += "q=" + this.locationByCity;
             } else if (this.locationById) {
