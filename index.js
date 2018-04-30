@@ -338,7 +338,7 @@ WeatherAccessory.prototype =
                 url += "forecast";
             }
 
-            url += "?APPID=" + this.apikey + "&units=metric&";
+            url += "?APPID=" + this.apikey + "&units=imperial&";
             if (this.locationByCity) {
                 url += "q=" + this.locationByCity;
             } else if (this.locationById) {
