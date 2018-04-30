@@ -27,6 +27,7 @@ function WeatherAccessory(log, config) {
     this.locationById = config["locationById"];
     this.locationByCoordinates = config["locationByCoordinates"];
     this.locationByZip = config["locationByZip"];
+    this.units = config["units"];
     if (config["showHumidity"] != null) {
         this.showHumidity = config["showHumidity"];
     } else {
@@ -65,7 +66,6 @@ WeatherAccessory.prototype =
     {
         backgroundPolling: function () {
             this.log.info("Polling data in background");
-
             if (this.type === "current" || this.type === "max" || this.type === "min") {
                 // Update Temperature
                 this.getStateTemp(function (error, temperature) {
@@ -338,7 +338,7 @@ WeatherAccessory.prototype =
                 url += "forecast";
             }
 
-            url += "?APPID=" + this.apikey + "&units=imperial&";
+            url += "?APPID=" + this.apikey + "&units=" + this.units + "&";
             if (this.locationByCity) {
                 url += "q=" + this.locationByCity;
             } else if (this.locationById) {
