@@ -1,5 +1,7 @@
 # homebridge-weather
 
+This is the imperial version of homebridge-weather and is not my work
+
 **Homebridge plugin for displaying the weather, humidity and min- or max-temperature from openweathermap.org**
 
 [![NPM version](https://badge.fury.io/js/homebridge-weather.svg)](https://npmjs.org/package/homebridge-weather) [![Dependency Status](https://david-dm.org/werthdavid/homebridge-weather.svg)](https://david-dm.org/werthdavid/homebridge-weather) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com) [![Downloads](https://img.shields.io/npm/dm/homebridge-weather.svg)](https://npmjs.org/package/homebridge-weather)
